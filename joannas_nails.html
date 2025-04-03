@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joanna's Nails</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fde2e4;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .service-selection, .calendar, .portfolio {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ffb6c1;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Joanna's Nails</h1>
+        
+        <div class="service-selection">
+            <h2>Επιλέξτε Υπηρεσία</h2>
+            <select id="service">
+                <option value="manicure">Μανικιούρ - 15€</option>
+                <option value="pedicure">Πεντικιούρ - 20€</option>
+                <option value="gel">Gel Νύχια - 30€</option>
+            </select>
+            <button onclick="showCalendar()">Συνέχεια</button>
+        </div>
+        
+        <div class="calendar" style="display:none;">
+            <h2>Επιλέξτε Ημερομηνία</h2>
+            <input type="date">
+            <button>Κλείστε Ραντεβού</button>
+        </div>
+        
+        <div class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/100" alt="Νύχια 1">
+                <img src="https://via.placeholder.com/100" alt="Νύχια 2">
+                <img src="https://via.placeholder.com/100" alt="Νύχια 3">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showCalendar() {
+            document.querySelector('.calendar').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
